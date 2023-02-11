@@ -1,3 +1,6 @@
+-- autor: Danley Alves
+-- data: 04-02-2023
+
 -- ENCONTRANDO O PID:
 -- Antes de encerrar o processo precisamos encontra o pid dele, pra isso fazemos uma consulta na tabela do sistema pg_stat_activity. Ela armazena informações sobre conexoes ativas com o banco, incluindo o pid de conexao.
 
@@ -19,3 +22,5 @@ SELECT pg_terminate_backend(pid)
 FROM pg_stat_activity
 WHERE datname = 'mydatabase'
 AND pid <> pg_backend_pid();
+
+
